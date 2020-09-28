@@ -1,0 +1,19 @@
+<template name="userActivity">
+  <div id="user-activity">
+    <h1>User Activities</h1>
+    {{#each userActivities}}
+    <div>
+      <h3>{{userName}}</h3>
+      <p>Zipcode: {{zipcode}}</p>
+      <p>Interests: {{interests}}</p>
+      <p>Page: {{page}}</p>
+      <p>Search term: {{searchTerm}}</p>
+    </div>
+    <hr>
+    {{/each}}
+  </div>
+</template>
+
+<template name="acTemplate">
+  <div id="container"></div>
+</template>
