@@ -10,7 +10,7 @@ public class UserActivity {
     String searchTerm;
     String page;
     String gender;
-    Instant timestamp;
+    String timestamp;
 
     public UserActivity(int userId, String userName, String zipcode, String[] interests, String searchTerm, String page, String gender) {
         this.userId = userId;
@@ -19,7 +19,8 @@ public class UserActivity {
         this.interests = interests;
         this.searchTerm = searchTerm;
         this.page = page;
-        this.timestamp = Instant.now();
+        this.gender = gender;
+        this.timestamp = Instant.now().toString();
     }
 
     public UserActivity updateSearch(String searchTerm) {
