@@ -46,9 +46,9 @@ public class ClickstreamEnrichment {
         KStream<Integer, UserActivity> viewsWithProfile = views.leftJoin(profiles,
                     (page, profile) -> {
                         if (profile != null)
-                            return new UserActivity(profile.getUserID(), profile.getUserName(), profile.getZipcode(), profile.getInterests(), "", page.getPage());
+                            return new UserActivity(profile.getUserID(), profile.getUserName(), profile.getZipcode(), profile.getInterests(), "", page.getPage(), profile.getGender());
                         else
-                           return new UserActivity(-1, "", "", null, "", page.getPage());
+                           return new UserActivity(-1, "", "", null, "", page.getPage(), "");
 
         });
 
