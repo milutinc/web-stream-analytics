@@ -1,0 +1,43 @@
+<template name="App_home">
+  <header>Web Stream Analytics</header>
+  <div id="main">
+    {{#if isReady}}
+      <article>
+        <div class="Aligner">
+          <div class="Aligner-item">
+            <canvas id="container"></canvas>
+            <hr class="hrWidth">
+            <div class="buttons">
+              <button class="changeChart" data-id="line">Line</button>
+              <button class="changeChart" data-id="bar">Bar</button>
+              <button class="changeChart" data-id="radar">Radar</button>
+              <button class="changeChart" data-id="pie">Pie</button>
+              <button class="changeChart" data-id="doughnut">Doughnut</button>
+              <button class="changeChart" data-id="polarArea">Polar Area</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <aside>
+        <h1>User Activities</h1>
+        <div id="user-activity">
+          {{#each userActivities}}
+            <div>
+              <h3>{{userName}}</h3>
+              <p>Zipcode: {{zipcode}}</p>
+              <p>Gender: {{gender}}</p>
+              <p>Interests: {{interests}}</p>
+              <p>Page: {{page}}</p>
+              <p>Search term: {{searchTerm}}</p>
+              <p>Timestamp: {{timestamp}}</p>
+            </div>
+            <hr>
+          {{/each}}
+        </div>
+      </aside>
+    {{else}}
+      {{> spinner}}
+    {{/if}}
+  </div>
+  <footer><small>2020 by Milutin Cvetkovic</small></footer>
+</template>

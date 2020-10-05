@@ -1,0 +1,81 @@
+@font-face {
+ font-family: 'robotoregular';
+ src: url('/fonts/roboto/Roboto-Regular-webfont.woff') format('woff');
+ font-weight: normal;
+ font-style: normal;
+}
+* {
+ box-sizing: border-box;
+}
+body {
+ margin: 0;
+ font-family: robotoregular;
+}
+#main {
+ display: flex;
+ min-height: calc(100vh - 10vh);
+ max-height: calc(100vh - 10vh);
+}
+#main > article {
+ flex: 1;
+}
+#main > aside {
+ flex: 0 0 30vw;
+ background: beige;
+}
+header, article, aside {
+ padding: 0.7em;
+}
+header {
+ background: yellowgreen;
+ height: 8vh;
+ text-align: center;
+ font-size: xx-large;
+ font-weight: bold;
+ padding-top: 15px;
+}
+footer {
+ /*background: yellowgreen;*/
+ height: 2vh;
+ text-align: center;
+ border-top: 1px solid black;
+}
+#container {
+ width: 100%;
+ height: 100%;
+}
+#user-activity {
+ max-height: calc(100vh - 20vh);
+ overflow: auto;
+}
+.buttons {
+ text-align: center;
+ margin-top: 20px;
+}
+.changeChart {
+ background-color: #4CAF50;
+ border: none;
+ color: white;
+ padding: 5px 32px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ margin: 4px 2px;
+ cursor: pointer;
+}
+.Aligner {
+ display: flex;
+ align-items: center;
+ min-height: calc(100vh - 10vh);
+ max-height: calc(100vh - 10vh);
+ justify-content: center;
+}
+
+.Aligner-item {
+ flex: 1;
+}
+
+.hrWidth {
+ width: 80% !important;
+}
